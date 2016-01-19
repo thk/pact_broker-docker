@@ -18,12 +18,18 @@ if defined?(PhusionPassenger)
   end
 end
 
+# DATABASE_CREDENTIALS = {
+#   adapter: "postgres",
+#   user: ENV['PACT_BROKER_DATABASE_USERNAME'],
+#   password: ENV['PACT_BROKER_DATABASE_PASSWORD'],
+#   host: ENV['PACT_BROKER_DATABASE_HOST'],
+#   database: ENV['PACT_BROKER_DATABASE_NAME']
+# }
+
 DATABASE_CREDENTIALS = {
-  adapter: "postgres",
-  user: ENV['PACT_BROKER_DATABASE_USERNAME'],
-  password: ENV['PACT_BROKER_DATABASE_PASSWORD'],
-  host: ENV['PACT_BROKER_DATABASE_HOST'],
-  database: ENV['PACT_BROKER_DATABASE_NAME']
+    adapter: "sqlite",
+    database: "pact_broker_database.sqlite3",
+    :encoding => 'utf8'
 }
 
 app = PactBroker::App.new do | config |

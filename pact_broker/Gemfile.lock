@@ -60,6 +60,7 @@ GEM
       rack-test (~> 0.6.2)
       randexp (~> 0.1.7)
       rspec (>= 2.14)
+      sqlite3 (1.3.11)
       term-ansicolor (~> 1.0)
       thor
       webrick
@@ -186,6 +187,7 @@ DEPENDENCIES
   pact_broker
   passenger
   pg
+  sqlite3
 
 BUNDLED WITH
    1.10.6
